@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%); /* Gradient for space-like feel */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.scene-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Full height to show stars across the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.status-text {
+  position: absolute;
+  bottom: 190px; /* Adjusted from 160px to 190px */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00b4d8;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+  z-index: 10;
+}
+
+.input-container {
+  position: absolute;
+  bottom: 110px; /* Adjusted from 80px to 110px to move it up more */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #00b4d8;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+  z-index: 10;
+}
+
+.input-container input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px 10px;
+  width: 300px;
+}
+
+.input-container input::placeholder {
+  color: #aaa;
+}
+
+.input-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.input-container button:hover {
+  transform: scale(1.1);
+}
+
+.input-container button svg {
+  width: 24px;
+  height: 24px;
+  stroke: #00b4d8;
+}
+
+.loading {
+  position: absolute;
+  bottom: 150px; /* Adjusted from 120px to 150px */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00b4d8;
+  font-size: 1rem;
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+  z-index: 10;
+}
+
+.support-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10; /* Ensure it’s above the canvas */
+  transition: background 0.3s;
+}
+
+.support-button:hover {
+  background: #e04343;
+}
